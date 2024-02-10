@@ -13,6 +13,18 @@ The case study information provided has been sourced from [HERE](https://8weeksq
 
 ![image](https://github.com/ErayBalkaya/Case-Study-1-Danny-s-Diner/assets/159141102/d669a397-b40a-457a-b12b-aafa8c6767ff)
 
+There is not much data about Danny's Diner challenge , but the secret here is to be able to find the correct ways to answer the questions.You can examine the tables below.
+
+#### Members table															                              
+![members_table](https://github.com/ErayBalkaya/Case-Study-1-Danny-s-Diner/assets/159141102/8b33cf87-d385-4ca7-9cb5-9cbe89dc31cf)         		  
+
+#### Menu Table
+![menu_table](https://github.com/ErayBalkaya/Case-Study-1-Danny-s-Diner/assets/159141102/e0705263-19b4-4560-ade1-fac113a2b46a)
+
+										
+#### Sales table
+![sales_table](https://github.com/ErayBalkaya/Case-Study-1-Danny-s-Diner/assets/159141102/9baa00ca-3d4c-4368-8816-b9021d1b2973)
+
 
 ## Case Study Questions:
 1)What is the total amount each customer spent at the restaurant?
@@ -74,6 +86,8 @@ GROUP BY 1;
 
 #### 3)What was the first item from the menu purchased by each customer?
 
+##### :⭐ NOTE : I prefer dense_rank() for this question because there are 2 orders in one day and there's no data about order hour or an order_id to show us the ranking.So if there are 2 orders same day i choose to show both of them as first.
+
 ```sql
 
 WITH ORDER_LIST AS
@@ -133,6 +147,8 @@ WHERE RANKING = 1
 
 
 #### 6)Which item was purchased first by the customer after they became a member?
+
+##### :⭐NOTE : I've included the day customers became member and i found out that their first order in the date they became member because as in question 3 there is no hour data or an order_id to show us which happening is first.  
 
 ```sql
 
