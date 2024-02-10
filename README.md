@@ -7,7 +7,7 @@ Danny's Dinner is the first case study of internet's famous 8 WEEK SQL CHALLENGE
 
 The case study information provided has been sourced from [HERE](https://8weeksqlchallenge.com/case-study-1/)
 
-8 weeks challenge is a good way to practice sql especially for beginners.It helps you to improve your skills on EDA (exploratory data analysis).
+8 weeks challenge is a good way to practice sql especially for beginners.It helps you to improve your skills on EDA (Exploratory Data Analysis).
 
 ## Entity Relationship Diagram:
 
