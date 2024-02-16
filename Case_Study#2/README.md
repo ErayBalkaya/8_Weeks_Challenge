@@ -56,8 +56,8 @@ This table contains all of the topping_name values with their corresponding topp
 
 ![pizza_toppings](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/5009fe90-6277-4949-9d47-4f43b0ea7c27)
 
-⭐Before you start writing your SQL queries however - you might want to investigate the data, you may want to do something with some of those null values and data types in the customer_orders and runner_orders tables!
-
+⭐Before you start writing your SQL queries however - you might want to investigate the data, you may want to do something with some of those null values and data types in the customer_orders and runner_orders tables!Click [HERE](https://github.com/ErayBalkaya/8_Weeks_Challenge/blob/main/Case_Study%232/Pizza_Runner.sql)
+to see how.
 ## Case Study Questions
 
 #### A. Pizza Metrics 🍕 🍕
