@@ -1,4 +1,4 @@
-# Case-Study-1-Danny-s-Dinner
+# Case Study 1 Danny's Dinner
 ### By Eray Balkaya
 ![image](https://github.com/ErayBalkaya/Case-Study-1-Danny-s-Diner/assets/159141102/de9ac74d-3d0f-4721-988f-956e35d92235)
 
@@ -51,9 +51,7 @@ There is not much data about Danny's Diner challenge , but the secret here is to
 
 12)Danny also requires further information about the ranking of customer products, but he purposely does not need the ranking for non-member purchases so he expects null ranking values for the records when customers are not yet part of the loyalty program.
 
-#### Are you ready to see how it's done !!!! ???
-
-## :boom::boom: LET'S ROLL :boom::boom:
+#### Let's see what is happening in Danny's Diner
 
 #### 1)What is the total amount each customer spent at the restaurant?
 
