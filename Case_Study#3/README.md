@@ -149,6 +149,9 @@ ORDER BY MONTHS;
 
 #### 📌 This question specially tells us to use the start of the month.That's why i used date_trunc.
 #### :loudspeaker:  But to be honest i think extract shall be better like ;
+
+```sql
+
 SELECT EXTRACT(MONTH FROM START_DATE) MONTHS,
 	COUNT(*) TOTAL_PLANS
 FROM SUBSCRIPTIONS S
@@ -157,8 +160,13 @@ WHERE PLAN_NAME = 'trial'
 GROUP BY MONTHS
 ORDER BY MONTHS;
 
---3.What plan start_date values occur after the year 2020 for our dataset? Show the breakdown by 
---count of events for each plan_name
+```
+![b2 2](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/3696d39f-e815-409e-a5d2-9d04f0621294)
+
+#### 3.What plan start_date values occur after the year 2020 for our dataset? Show the breakdown by count of events for each plan_name
+
+```sql
+
 SELECT S.PLAN_ID,
 	P.PLAN_NAME,
 	COUNT(*)
@@ -169,23 +177,40 @@ GROUP BY S.PLAN_ID,
 	P.PLAN_NAME
 ORDER BY S.PLAN_ID;
 
+```
 
---4.What is the customer count and percentage of customers who have churned rounded to 1 decimal
---place?
+![b3](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/d3e286dd-78b7-4a26-b0f3-3fb8365d6623)
+
+#### 4.What is the customer count and percentage of customers who have churned rounded to 1 decimal place?
+
+```sql
+
 SELECT ROUND(
 	(SELECT COUNT(CUSTOMER_ID) FROM SUBSCRIPTIONS
 	WHERE PLAN_ID =(
 		SELECT PLAN_ID FROM PLANS
 			WHERE PLAN_NAME LIKE 'churn')) * 100.1 / COUNT(DISTINCT CUSTOMER_ID),1)CHURNED_CUST_PER
 FROM SUBSCRIPTIONS
---Or if you can find plan_id of churn easily in your database ;
+
+```
+
+#### :speaker:  Or if you can find plan_id of churn easily in your database ;
+
+```sql
+
 SELECT ROUND(
 	(SELECT COUNT(CUSTOMER_ID) FROM SUBSCRIPTIONS
 	WHERE PLAN_ID =4) * 100.1 / COUNT(DISTINCT CUSTOMER_ID),1)CHURNED_CUST_PER
-FROM SUBSCRIPTIONS	
+FROM SUBSCRIPTIONS
 
---5.How many customers have churned straight after their initial free trial - what percentage is
---this rounded to the nearest whole number?
+```
+	
+![b4](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/79c3f689-6cb9-4e02-8528-946db63b1838)
+
+#### 5.How many customers have churned straight after their initial free trial - what percentage is this rounded to the nearest whole number?
+
+```sql
+
 WITH RANKING AS (
 SELECT CUSTOMER_ID,PLAN_NAME,
 	RANK() OVER(PARTITION BY customer_id ORDER BY start_date)RANK
@@ -201,7 +226,14 @@ ROUND (
 FROM RANKING 
 WHERE RANK=2 AND PLAN_NAME LIKE 'churn'
 
---6.What is the number and percentage of customer plans after their initial free trial?
+```
+
+![b5](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/184921ce-8900-4707-8b20-c576823fd442)
+
+#### 6.What is the number and percentage of customer plans after their initial free trial?
+
+```sql
+
 WITH RANKING AS (
 SELECT CUSTOMER_ID,PLAN_NAME,
 	RANK() OVER(PARTITION BY customer_id ORDER BY start_date)RANK
@@ -217,8 +249,14 @@ FROM RANKING
 WHERE RANK=2 
 GROUP BY PLAN_NAME
 
+```
 
---7.What is the customer count and percentage breakdown of all 5 plan_name values at 2020-12-31?
+![b6](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/ef2184ee-8cb7-4212-93f0-d7f5ef9a73a9)
+
+#### 7.What is the customer count and percentage breakdown of all 5 plan_name values at 2020-12-31?
+
+```sql
+
 WITH RANKING AS
 	(SELECT *,
 			RANK () OVER (PARTITION BY CUSTOMER_ID ORDER BY START_DATE DESC)RANK
@@ -234,9 +272,14 @@ JOIN PLANS P ON R.PLAN_ID = P.PLAN_ID
 WHERE RANK = 1
 GROUP BY 1
 
+```
 
+![b7](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/950a166d-8f64-49c5-a4b8-0800adf54543)
 
---8.How many customers have upgraded to an annual plan in 2020?
+#### 8.How many customers have upgraded to an annual plan in 2020?
+
+```sql
+
 SELECT COUNT(DISTINCT CUSTOMER_ID)CUSTOMER
 FROM SUBSCRIPTIONS
 WHERE PLAN_ID =
@@ -245,8 +288,14 @@ WHERE PLAN_ID =
 			WHERE PLAN_NAME like '%annual%')
 	AND EXTRACT (YEAR FROM START_DATE) = 2020
 
---9.How many days on average does it take for a customer to an annual plan from the day they 
---join Foodie-Fi?
+```
+
+![b8](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/a0729a01-a1fe-467d-8a26-21eae6e48554)
+
+#### 9.How many days on average does it take for a customer to an annual plan from the day they join Foodie-Fi?
+
+```sql
+
 WITH ANNUAL_DATES AS
 	(SELECT CUSTOMER_ID,
 			START_DATE
@@ -267,9 +316,14 @@ SELECT ROUND(AVG(AD.START_DATE - TD.START_DATE))AVG_DAYS
 FROM ANNUAL_DATES AD
 JOIN TRIAL_DATES TD ON AD.CUSTOMER_ID = TD.CUSTOMER_ID
 
+```
 
---10.Can you further breakdown this average value into 30 day periods 
---(i.e. 0-30 days, 31-60 days etc)
+![b9](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/1fd1c3d7-074f-430a-bfcb-ac39869eb1eb)
+
+#### 10.Can you further breakdown this average value into 30 day periods (i.e. 0-30 days, 31-60 days etc)
+
+```sql
+
 WITH JOIN_DATE AS
 	(SELECT CUSTOMER_ID,
 			START_DATE
@@ -290,7 +344,14 @@ FROM BINS
 GROUP BY AVG_DAYS_TO_UPGRADE
 ORDER BY AVG_DAYS_TO_UPGRADE;
 
---11.How many customers downgraded from a pro monthly to a basic monthly plan in 2020?
+```
+
+![b10](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/397ed718-83d3-4436-95ec-6f365914f331)
+
+#### 11.How many customers downgraded from a pro monthly to a basic monthly plan in 2020?
+
+```sql
+
  WITH BASIC_MONTHLY AS
 	(SELECT CUSTOMER_ID,
 			START_DATE BASIC_STARTS
@@ -308,3 +369,5 @@ FROM PRO_MONTHLY PM
 JOIN BASIC_MONTHLY BM ON BM.CUSTOMER_ID = PM.CUSTOMER_ID
 WHERE BASIC_STARTS > PRO_STARTS
 	AND EXTRACT(YEAR FROM BASIC_STARTS) = 2020
+```
+#### The answer is NONE 
