@@ -54,7 +54,7 @@ Try to keep it as short as possible - you may also want to run some sort of join
 
 11)How many customers downgraded from a pro monthly to a basic monthly plan in 2020?
 
-## :BOMB: BEFORE YOU CHECK MY SOLUTIONS I WANT TO WARN YOU ABOUT THE QUESTIONS.I CHANGED SOME QUESTION FROM ORIGINAL AND SOMETIMES I ADDED NEW QUESTIONS
+### 💣 💣 💣 BEFORE YOU CHECK MY SOLUTIONS I WANT TO WARN YOU ABOUT THE QUESTIONS.I CHANGED SOME OF THEM FROM ORIGINAL AND SOMETIMES I ADDED NEW ONES
 
 ## SOLUTIONS 🚀
 
