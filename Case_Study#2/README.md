@@ -168,8 +168,8 @@ SELECT COUNT(PIZZA_ID)TOTAL_ORDERS
 FROM CUSTOMER_ORDERS;
 
 ```
+![a1](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/ba1ce555-12a6-4f37-afb9-6c474716dff3)
 
-![a1](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/ef2d8617-de47-4140-9eb7-0b05c43116d7)
 
 #### 2)How many unique customer orders were made?
 
@@ -179,8 +179,7 @@ SELECT COUNT(DISTINCT ORDER_ID) UNIQUE_CUS_ORDERS_COUNT
 FROM CUSTOMER_ORDERS;
 
 ```
-
-![a2](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/0616d2d5-aa60-4077-9bed-75eadf9f88c2)
+![a2](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/c8f10f33-094f-4470-8d70-45c53672667c)
 
 #### 3)How many successful orders were delivered by each runner?
 
@@ -193,8 +192,7 @@ WHERE DURATION IS NOT NULL
 GROUP BY RUNNER_ID;
 
 ```
-
-![a3](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/7e686916-5fdc-48e5-bdab-a435fb635ff9)
+![a3](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/f9757203-1df2-4d41-80a6-491a8907066d)
 
 #### 4)How many of each type of pizza was delivered?
 
@@ -211,8 +209,7 @@ GROUP BY CO.PIZZA_ID,
 	PN.PIZZA_NAME;
 
 ```
-
-![a4](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/975f00c4-2730-40c7-b43b-47cc6daa2303)
+![a4](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/82425a69-52de-48bc-b346-56513d959a76)
 
 #### 5)How many Vegetarian and Meatlovers were ordered by each customer?
 
@@ -228,8 +225,7 @@ GROUP BY CO.CUSTOMER_ID,
 ORDER BY CO.CUSTOMER_ID;
 
 ```
-
-![a5](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/e567e692-3a78-4dad-9041-883bf64bf979)
+![a5](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/b9177bf1-faea-48d8-9b9d-8dab80fe2d45)
 
 #### 6)What was the maximum number of pizzas delivered in a single order?
 
@@ -243,8 +239,7 @@ ORDER BY 2 DESC
 LIMIT 1;
 
 ```
-
-![a6](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/421c977b-44c3-4340-bdd4-600ed36d52d7)
+![a6](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/9167a461-48e6-4aaf-b66e-353de3abd1de)
 
 #### 7)For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
 
@@ -271,9 +266,7 @@ FROM PIZZA_CHANGES
 GROUP BY CUSTOMER_ID;
 
 ```
-
-![a7](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/d0054d09-9643-418e-aadb-62f5a54197f8)
-
+![a7](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/d41778fc-301c-4f42-99ed-73fc9c766222)
 
 #### 8)How many pizzas were delivered that had both exclusions and extras?And what is the customer_id?
 
@@ -291,8 +284,7 @@ GROUP BY
 	1;
 
 ```
-
-![a8](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/863c34d7-2661-4da8-bfac-d29b73dfa161)
+![a8](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/e2d14937-157b-4bcb-9424-be9db66bfe9b)
 
 #### 9)What was the total volume of pizzas ordered for each hour of the day?
 :triangular_flag_on_post: I did not exclude the canceled orders because they asks order counts not succesfull orders
@@ -306,9 +298,7 @@ GROUP BY HOUR_OF_DAY
 ORDER BY HOUR_OF_DAY;
 
 ```
-
-![a9](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/0243a33d-5098-46da-9862-108fd915cb7e)
-
+![a9](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/9f27a4ae-c2cd-4b75-a296-27e2801c320c)
 
 #### 10)What was the volume of orders for each day of the week?
 
@@ -322,8 +312,7 @@ GROUP BY DAY_OF_WEEK
 ORDER BY DAY_OF_WEEK;
 
 ```
-
-![a10](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/7d1175b0-b397-426b-8b0a-65567ebd722e)
+![a10](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/28e1b3a0-2aa8-4816-9404-edb293469bed)
 
 #### B. Runner and Customer Experience
 #### 1)How many runners signed up for each 1 week period?
@@ -336,8 +325,7 @@ FROM RUNNERS
 GROUP BY WEEK_PERIOD;
 
 ```
-
-![b1](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/4955a368-09b0-46ef-8689-2ae202c6b2cd)
+![b1](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/24ad43da-f355-4e29-a90d-5ffac5833a9d)
 
 #### 2)What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?
 
@@ -351,8 +339,7 @@ LEFT JOIN RUNNER_ORDERS RO ON CO.ORDER_ID = RO.ORDER_ID
 GROUP BY RO.RUNNER_ID;
 
 ```
-
-![b2](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/6304626e-8b79-4ac4-8cd5-32e32d1fa016)
+![b2](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/1e900b71-ad00-4f0a-b157-315ea2073d5a)
 
 #### 3)Is there any relationship between the number of pizzas and how long the order takes to prepare?
 
@@ -374,8 +361,7 @@ FROM DELIVERY_TIME
 GROUP BY 1;
 
 ```
-
-![b3](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/f82463de-b0ca-4038-820d-8193c9906289)
+![b3](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/9fdff8f0-fc5f-4ec1-a4ab-98062630d48e)
 
 #### 4)What was the average distance travelled for each customer?
 
@@ -389,8 +375,7 @@ GROUP BY 1
 ORDER BY 1;
 
 ```
-
-![b4](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/43ac031d-feec-42c8-8f8f-7c10a577d7d7)
+![b4](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/ae37b446-35d5-47eb-b676-a6cf7530bedd)
 
 #### 5)What was the difference between the longest and shortest delivery times for all orders?
 
@@ -402,8 +387,7 @@ FROM runner_orders
 WHERE duration IS NOT null;
 
 ```
-
- ![b5](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/07012a03-e0b0-452a-ae2c-696c8519ecdf)
+![b5](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/e544d8bd-136d-4491-b6e9-c180abef11dc)
 
 #### 6)What was the average speed for each runner for each delivery and do you notice any trend for these values?
 
@@ -417,8 +401,7 @@ GROUP BY 1,2
 ORDER BY 1
 
 ```
-
-![b6](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/bd646de1-4e10-4982-a509-2fc5c8f83cb2)
+![b6](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/83e8973b-e82d-432d-ad4d-a9c38e67f67d)
 
 #### 7)What is the successful delivery percentage for each runner?
 
@@ -433,8 +416,7 @@ FROM runner_orders
 GROUP BY runner_id;
 
 ```
-
-![b7](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/1805682f-27c8-4435-8382-c9fee459ff9f)
+![b7](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/ec6e373c-59b1-4ffb-8134-c3659d43dda7)
 
 #### C. Ingredient Optimisation
 #### 1)What are the standard ingredients for each pizza?
@@ -458,7 +440,7 @@ GROUP BY tf.topping_id, pt.topping_name
 ORDER BY topping_count DESC;
 
 ```
-![c1](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/e6d151af-f93e-4cc8-8779-932e9ce6603e)
+![c1](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/af4fbc2c-2023-48f2-9939-500871a80aad)
 
 #### 2)What was the most commonly added extra?
 
@@ -478,8 +460,7 @@ GROUP BY PT.TOPPING_NAME
 ORDER BY COUNT(EXTRAS_SEPERATE) DESC
 
 ```
-
-![c2](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/fae97171-cf1d-4547-86bd-524f39783e4e)
+![c2](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/c6e99505-88d9-4bac-b4a2-618ca8c626b9)
 
 #### 3)What was the most common exclusion?
 
@@ -499,8 +480,7 @@ GROUP BY PT.TOPPING_NAME
 ORDER BY COUNT(EXCLUSIONS_SEPERATE) DESC;
 
 ```
-
-![c3](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/c912f335-0106-41bb-b7c7-7ecea0224948)
+![c3](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/7ea6575b-66bb-446e-be6d-4a14dfd5d883)
 
 #### 4)Generate an order item for each record in the customers_orders table in the format of one of the following:
 
@@ -518,7 +498,7 @@ GROUP BY ORDER_ID;
 
 ```
 
-![c4 1](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/44be8c6f-598a-4a80-9ebb-10cc176f11e6)
+![c4 1](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/f6b20552-4ded-4e5e-9ef4-7879d533adfb)
 
 :round_pushpin: Meat Lovers - Exclude Beef (Everybody loves 🥩 that' why the answer is 0️⃣ )
 
@@ -550,8 +530,7 @@ JOIN customer_orders co ON co.order_id=ef.order_id
 WHERE PT.TOPPING_NAME='Bacon'
 
 ```
-
-![c4 3](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/20de50a6-b54d-4aeb-8a7f-bcac60364616)
+![c4 3](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/a2d96579-3249-42a0-b6ea-095499d3dd19)
 
 #### 5)Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table and add a 2x in front of any relevant ingredients
 ℹ️ For example: "Meat Lovers: 2xBacon, Beef, ... , Salami"
@@ -573,8 +552,7 @@ GROUP BY CO.ORDER_ID,
 	PN.PIZZA_NAME;
 
 ```
-
-![c5](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/5278f58b-00b3-443e-97c9-f808c4b202fe)
+![c5](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/5a7e4212-c3d7-4dc5-942e-8ea29632bcbc)
 
 #### 6)What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?
 
@@ -602,8 +580,7 @@ GROUP BY 1
 ORDER BY 2 DESC;
 
 ```
-
-![c6](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/5cfc94b5-53f7-49b3-a2fd-0e6984d37429)
+![c6](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/0c18634a-b14b-47db-b17a-8838cc383539)
 
 #### D. Pricing and Ratings 💵
 #### 1)If a Meat Lovers pizza costs 💲12 and Vegetarian costs 💲10 and there were no charges for changes.How much money has Pizza Runner made so far from each type of pizza if there are no delivery fees?
@@ -620,8 +597,7 @@ WHERE RO.DURATION IS NOT null
 GROUP BY PIZZA_ID;
 
 ```
-
-![d1](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/098ad9b1-b51b-4e38-888f-4cb2883b6aec)
+![d1](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/2406d96e-532e-48ee-b1ae-30a496b3bee6)
 
 #### 2)What if there was an additional 💲1 charge for any pizza extras?
 
@@ -668,8 +644,7 @@ JOIN EXTRA_TOTAL ET ON TI.PIZZA_ID = ET.PIZZA_ID
 GROUP BY 1,3;
 
 ```
-
-![d2](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/1526811e-8844-4610-9691-a53f532fd418)
+![d2](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/4584a4ba-647b-44af-9a5b-f27e5b63d5f9)
 
 #### 3)The Pizza Runner team now wants to add an additional ratings system that allows customers to rate their runner,how would you design an additional table for this new dataset - generate a schema for this new table and insert your own data for ratings for each successful customer order between 1 to 5.
 
@@ -691,8 +666,7 @@ FROM RUNNER_ORDERS;
 SELECT * FROM RUNNER_RATINGS;
 
 ```
-
-![d3](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/bcfcf3be-c2d5-44a3-88cf-91bca63ace8b)
+![d3](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/402d79dd-ba80-4d0d-9118-69ef035d485e)
 
 #### 4)If a Meat Lovers pizza was 💲12 and Vegetarian 💲10 fixed prices with no cost for extras and each runner is paid 💲0.30 per kilometre traveled - how much money does Pizza Runner have left over after these deliveries?
 
@@ -714,6 +688,5 @@ SELECT
 	(SELECT RUNNER_COST FROM RUNNER_MONEY) AS TOTAL_COST;
 
 ```
-
-![d4](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/12d079f3-9e3a-4c6c-8a3f-f1b8938c0ece)
+![d4](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/ce09983b-6b1c-467c-8cec-c5f82e7c43d6)
 
