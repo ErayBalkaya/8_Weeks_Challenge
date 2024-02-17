@@ -1,6 +1,7 @@
 # Case Study 2 Pizza Runner
 ### By Eray Balkaya
-![image](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/8ce89107-d138-45b2-9a5c-768228f3d166)
+![image](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/e922db6b-6448-43e8-b415-87ee40926c0a)
+
 
 
 Pizza Runner is the second case study of internet's famous 8 WEEK SQL CHALLENGE
@@ -11,7 +12,7 @@ The case study information provided has been sourced from [HERE](https://8weeksq
 
 ## Entity Relationship Diagram:
 
-![image](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/9841a44d-e4e6-429d-9f28-9dc7f1661277)
+![image](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/87b09fd4-3913-42de-855c-9949f6041ac9)
 
 
 There is not much data about Pizza Runner challenge , but the secret here is to be able to find the correct ways to answer the questions.You can examine all 6 tables below.
@@ -20,7 +21,8 @@ There is not much data about Pizza Runner challenge , but the secret here is to 
 
 The customer_orders table captures customer pizza orders,order times and indegerents they want to add or remove from their order.
 
-![customer_orders](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/4ccdffd1-e711-46fd-9b3d-5d652a6e968d)
+![customer_orders](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/72fb42b5-63ce-4c56-8047-972f38960ef9)
+
 
 ### 2️⃣ runner_orders
 
@@ -30,31 +32,32 @@ The pickup_time is the timestamp at which the runner arrives at the Pizza Runner
 
 There are some known data issues with this table so be careful when using this in your queries - make sure to check the data types for each column in the schema SQL!
 
-![runner_orders](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/79a74306-4646-4017-baae-74483b8258af)
+![runner_orders](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/eb126016-b7df-4756-be92-6ff363186617)
+
 
 ### 3️⃣ runners                                                                                                            
 
 The runners table shows an unique ID for each runner and the dates that each runner registered
 
-![runners](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/15187050-25ed-4ecb-b157-0d77b2c5ec9c)          
-
+![runners](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/7101a551-ce7a-4e39-97a4-cb6facfceafb)
+         
 ### 4️⃣ pizza_names  
 
 Pizza Runner only has 2 pizzas available: the Meat Lovers or Vegetarian
 
-![pizza_names](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/734aa416-df15-46b5-9194-d894e0648262)
+![pizza_names](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/0e637bef-80ad-43ac-a579-8bcfb44e0290)
 
 ### 5️⃣ pizza_recipes 
 
 Each pizza_id has a standard set of toppings which are used as part of the pizza recipe.
 
-![pizza_recipes](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/4bec0d01-66c9-4f50-af95-466b29a3b026)
+![pizza_recipes](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/eed55970-a22c-403f-aa3d-5a212e832665)
 
 ### 6️⃣ pizza_toppings
 
 This table contains all of the topping_name values with their corresponding topping_id value
 
-![pizza_toppings](https://github.com/ErayBalkaya/Case_Study-2/assets/159141102/5009fe90-6277-4949-9d47-4f43b0ea7c27)
+![pizza_toppings](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/06f557a9-669e-4ac9-887e-5ef16321a642)
 
 ⭐Before you start writing your SQL queries however - you might want to investigate the data, you may want to do something with some of those null values and data types in the customer_orders and runner_orders tables!Click [HERE](https://github.com/ErayBalkaya/8_Weeks_Challenge/blob/main/Case_Study%232/Pizza_Runner.sql)
 to see how.
