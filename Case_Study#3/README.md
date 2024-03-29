@@ -1,4 +1,4 @@
-# Case Study 2 Foodie Fi
+# Case Study 3 Foodie Fi
 ### By Eray Balkaya
 ![image](https://github.com/ErayBalkaya/8_Weeks_Challenge/assets/159141102/9694b4ac-2642-4656-ac48-7ccbd96c188e)
 
